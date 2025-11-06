@@ -19,4 +19,6 @@ VALUES
 ('Mehedi', 'Hasan', 22, 'A-', 'Information Technology', 'mehedi.hasan@example.com', '2003-01-17', 'B-', 'Bangladesh'),
 ('Anika', 'Sultana', 20, 'B', 'Business Administration', 'anika.sultana@example.com', '2005-03-25', 'AB+', 'India');
 
-SELECT * FROM students;
+-- use Order as Shorting 
+SELECT * FROM students ORDER BY first_name ASC;
+SELECT * FROM students ORDER BY age DESC;
