@@ -28,3 +28,9 @@ ALTER TABLE person
     ALTER COLUMN user_age DROP NOT NULL;
 
 
+-- unique 
+ALTER TABLE person
+     ADD constraint unique_person_user_age UNIQUE(user_age);
+
+-- delete the table
+TRUNCATE TABLE person;
