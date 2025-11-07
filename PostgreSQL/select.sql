@@ -115,3 +115,10 @@ SELECT * FROM students LIMIT 5 OFFSET 5 * 2;
 SELECT * FROM students;
 DELETE FROM students
     WHERE grade = 'A-' AND country = 'India';
+
+-- Update data  
+SELECT * FROM students;
+
+UPDATE students
+set email = 'faasif@gmail.com', age = 24 , course = 'CSE'
+WHERE student_id = 11;
