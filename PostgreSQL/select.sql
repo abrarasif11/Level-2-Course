@@ -24,4 +24,13 @@ VALUES
 -- SELECT * FROM students ORDER BY age DESC;
 
 --  unique data
-SELECT DISTINCT country from students;
+-- SELECT DISTINCT country from students;
+-- SELECT DISTINCT blood_group from students;
+
+-- data filtering 
+
+SELECT * FROM students
+    WHERE country = 'Bangladesh';
+
+SELECT * FROM students
+     WHERE blood_group = 'A+';
