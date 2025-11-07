@@ -101,4 +101,17 @@ SELECT * FROM students
 SELECT * FROM students
    WHERE first_name ILIKE 'A%';
 
-   
+-- Limit Offset and Data Deletion
+
+SELECT * FROM students 
+    WHERE country IN('India') LIMIT 5;
+
+-- pagination type data show
+SELECT * FROM students LIMIT 5 OFFSET 5 * 0;
+SELECT * FROM students LIMIT 5 OFFSET 5 * 1;
+SELECT * FROM students LIMIT 5 OFFSET 5 * 2;
+
+--  Data Deletion 
+SELECT * FROM students;
+DELETE FROM students
+    WHERE grade = 'A-' AND country = 'India';
