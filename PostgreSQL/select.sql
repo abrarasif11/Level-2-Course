@@ -20,5 +20,8 @@ VALUES
 ('Anika', 'Sultana', 20, 'B', 'Business Administration', 'anika.sultana@example.com', '2005-03-25', 'AB+', 'India');
 
 -- use Order as Shorting 
-SELECT * FROM students ORDER BY first_name ASC;
-SELECT * FROM students ORDER BY age DESC;
+-- SELECT * FROM students ORDER BY first_name ASC;
+-- SELECT * FROM students ORDER BY age DESC;
+
+--  unique data
+SELECT DISTINCT country from students;
