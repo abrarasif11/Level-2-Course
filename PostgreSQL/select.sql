@@ -29,8 +29,16 @@ VALUES
 
 -- data filtering 
 
-SELECT * FROM students
-    WHERE country = 'Bangladesh';
+-- SELECT * FROM students
+--     WHERE country = 'Bangladesh';
+
+-- SELECT * FROM students
+--      WHERE grade = 'A' AND country = 'USA';
+
+-- SELECT * FROM students
+--     WHERE country = 'Bangladesh' OR country = 'USA' AND age='20';
+
+-- data comparison
 
 SELECT * FROM students
-     WHERE blood_group = 'A+';
+    WHERE country <> 'USA';
