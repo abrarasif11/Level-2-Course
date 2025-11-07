@@ -82,3 +82,23 @@ SELECT * FROM students
 SELECT * FROM students
 
 SELECT COALESCE(email, 'NULL')as "Emails" FROM students;
+
+--  Exploring IN, BETWEEN, LIKE, and ILIKE Operators
+
+SELECT * FROM students WHERE country IN('Bangladesh','UK','Canada');
+
+SELECT * FROM students WHERE country NOT IN('Bangladesh','UK','Canada');
+
+SELECT * FROM students
+   WHERE dob BETWEEN '2001-10-03' and '2002-09-12' ORDER BY dob;
+
+SELECT * FROM students
+   WHERE first_name LIKE '%ka';
+SELECT * FROM students
+   WHERE first_name LIKE '__a_';
+
+--    ILIKE case insensitive
+SELECT * FROM students
+   WHERE first_name ILIKE 'A%';
+
+   
