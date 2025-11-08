@@ -22,3 +22,5 @@ SELECT age(CURRENT_DATE, '2001-10-30');
 SELECT *, age(CURRENT_DATE, dob) FROM students;
 
 SELECT extract(month from '2001-11-29'::date);
+
+-- Group By Function
