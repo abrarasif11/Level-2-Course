@@ -48,10 +48,16 @@ JOIN "user" on p.user_id = "user".id;
 SELECT * FROM post p
 JOIN "user"u on p.user_id = u.id;
 
--- Left Right Joins 
+-- Left Joins 
 
 INSERT INTO post (id, title, user_id)VALUES
 (7,'This is a not Post paste', NULL);  
 
 SELECT * FROM post as p
 LEFT JOIN "user" as u on p.user_id = u.id;
+
+-- Right join
+
+SELECT * FROM post as p
+RIGHT JOIN "user" as u on p.user_id = u.id;
+
