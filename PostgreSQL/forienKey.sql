@@ -59,3 +59,5 @@ INSERT INTO post (title, user_id) VALUES('testN', NULL)
 
 DELETE FROM "user"
    WHERE id = 4;
+
+-- Table Joining
