@@ -8,7 +8,7 @@ CREATE TABLE "user"(
 CREATE TABLE post(
     id SERIAL PRIMARY KEY,
     title TEXT NOT NULL,
-    user_id INTEGER REFERENCES "user"(id)
+    user_id INTEGER REFERENCES "user"(id) on delete set DEFAULT DEFAULT 2
 )   
 
 
@@ -39,6 +39,11 @@ INSERT INTO post (title, user_id) VALUES
 ('Priya’s event planning tips', 5);
 
 
+DROP TABLE post;
+
+DROp Table "user";
+
+
 ALTER TABLE post 
     ALTER COLUMN user_id set NOT NULL;
 
@@ -49,4 +54,8 @@ INSERT INTO post (title, user_id) VALUES('test', 1)
 
 INSERT INTO post (title, user_id) VALUES('testN', NULL)
 
+-- Enforcing Referential Integrity: Behaviors During Data Deletion
+-- Default DELETE
 
+DELETE FROM "user"
+   WHERE id = 4;
