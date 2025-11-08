@@ -32,15 +32,21 @@ INSERT INTO "user" (username) VALUES
 
 
 INSERT INTO post (title, user_id) VALUES
-INSERT INTO post (title, user_id) VALUES
 ('My first blog post', 1),
 ('Learning SQL basics', 2),
 ('Exploring IoT projects', 3),
 ('Travel diaries of Nodi', 4),
 ('Priya’s event planning tips', 5);
 
+
+ALTER TABLE post 
+    ALTER COLUMN user_id set NOT NULL;
+
 SELECT * FROM "user";
+SELECT * FROM post;
 
+INSERT INTO post (title, user_id) VALUES('test', 1)
 
+INSERT INTO post (title, user_id) VALUES('testN', NULL)
 
 
