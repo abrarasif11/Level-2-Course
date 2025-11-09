@@ -70,3 +70,26 @@ GROUP BY department_name
 ORDER BY avg_salary DESC
 LIMIT 1
 ;
+
+-- Q4 Find cx who have more than 2 orders and calculate the total spend by each cx
+
+CREATE TABLE orders (
+    order_id SERIAL PRIMARY KEY,
+    customer_id INT,
+    order_date DATE,
+    total_amount DECIMAL(10,2)   
+);
+
+INSERT INTO orders (customer_id, order_date, total_amount) VALUES
+(1, '2025-10-28', 120.50),
+(2, '2025-10-29', 89.99),
+(3, '2025-10-30', 45.00),
+(1, '2025-11-01', 210.75),
+(4, '2025-11-02', 330.20),
+(5, '2025-11-03', 59.95),
+(2, '2025-11-04', 149.00),
+(6, '2025-11-05', 75.49),
+(7, '2025-11-06', 480.00),
+(3, '2025-11-07', 99.99);
+
+SELECT customer_id, count(order_id) FROM orders GROUP BY customer_id HAVING count(order_id) > 2;
