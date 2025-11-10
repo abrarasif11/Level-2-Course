@@ -32,3 +32,15 @@ $$
 $$
 
 SELECT delete_emp_by_id(19);
+
+-- procedure 
+CREATE Procedure rmv_emp()
+LANGUAGE plpgsql
+AS
+$$
+    BEGIN
+       DELETE FROM employees where employee_id = 15;
+    END
+$$;
+
+CALL rmv_emp();
