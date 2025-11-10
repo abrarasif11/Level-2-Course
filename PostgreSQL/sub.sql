@@ -38,3 +38,7 @@ SELECT * FROM employees;
 -- //! SELECT * FROM employees WHERE salary > 45000
 
 SELECT * FROM employees WHERE salary > (SELECT max(salary) from employees WHERE department_name = 'HR')
+
+SELECT *, (SELECT sum(salary) FROM employees) FROM employees;
+
+SELECT * FROM (SELECT department_name, sum(salary) FROM employees GROUP BY department_name) as sum_dept_salary;
