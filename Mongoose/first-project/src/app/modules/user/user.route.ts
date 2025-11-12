@@ -1,8 +1,7 @@
-export type TUser = {
-  id: string;
-  password: string;
-  needsPasswordChange: boolean;
-  role: 'admin' | 'student' | 'faculty';
-  status: 'in-progress' | 'blocked';
-  isDeleted: boolean;
-};
+import express from 'express';
+
+const router = express.Router();
+
+router.post('/create-student', .createStudent);
+
+export const UserRoutes = router;
